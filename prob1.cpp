@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int main(){
+int units;
+cout<<"Enter the number of units"<<endl;
+cin>>units;
+float bill;
+//if units is less than or equals too 100
+if(units<=100){
+    bill=units*5;
+    cout<<"bill:"<<bill<<endl;
+}
+//if units is less than 200
+else if(units<=200){
+    bill=(100*5)+((units-100)*8);
+    cout<<"bill:"<<bill<<endl;
+    
+}
+else if(units>200){
+    bill=(100*5)+(100*8)+((units-200)*10);
+    cout<<"bill:"<<bill<<endl;
+    
+}
+//if bill is greater than 2000 than 10% surcharge is also added
+if(bill>2000){
+    bill=bill+(bill*0.10);
+    cout<<"bill after surcharge:"<<bill;
+}
+else{
+    cout<<"bill (no surcharge):"<<bill;
+}
+
+}
